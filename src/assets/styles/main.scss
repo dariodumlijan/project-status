@@ -1,5 +1,5 @@
 html {
-  background: $black;
+  background: $background;
   color: $white;
   height: 100%;
   width: 100%;
@@ -17,10 +17,23 @@ html {
       width: 100%;
 
       main {
-        margin: 20px auto 60px auto;
-        max-width: 1200px;
-        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
         width: 100%;
+
+        .application-wrapper {
+          display: flex;
+          gap: 40px;
+          margin: 0 auto 20px auto;
+          max-width: 1200px;
+          padding: 0 20px;
+          width: 100%;
+
+          section {
+            width: 100%;
+          }
+        }
       }
     }
   }

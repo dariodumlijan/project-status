@@ -1,7 +1,15 @@
+import Header from './components/Header';
+import Release from './components/Release';
+import Status from './components/Status';
+
 function App() {
   return (
     <main>
-      <h1>Hello World</h1>
+      <Header />
+      <div className="application-wrapper">
+        <Release />
+        <Status />
+      </div>
     </main>
   );
 }
