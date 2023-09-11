@@ -25,24 +25,10 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
-jest.mock('react-i18next', () => ({
-  useTranslation: () => ({
-    t: (str: string) => str,
-    i18n: {
-      language: 'en',
-      changeLanguage: () => new Promise(() => {}),
-    },
-  }),
-  withTranslation: () => (Component: any) => {
-    Component.defaultProps = {
-      ...Component.defaultProps,
-      t: (str: string) => str,
-    };
-
-    return Component;
-  },
-}));
-
-jest.mock('i18next', () => ({
-  t: (str) => str,
+jest.mock('react-query', () => ({
+  useQuery: jest.fn().mockReturnValue(({
+    data: {},
+    error: {},
+    isLoading: false,
+  })),
 }));

@@ -1,2 +1,5 @@
+vite.config.ts
+vitest.config.ts
+setupTests.ts
 /dist
 /src/declarations.d.ts

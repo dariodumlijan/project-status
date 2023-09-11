@@ -12,11 +12,13 @@ function Release() {
   if (isError) return <div>Error! {get(error, 'message', '')}</div>;
 
   return (
-    <section className="release-wrapper">
-      <h2>Latest release</h2>
-      {data?.data.body && (
+    <section className="card-wrapper release-wrapper">
+      <h2 className="title">Latest release</h2>
+      <div className="content">
+        {data?.data.body && (
         <ReactMarkdown>{data.data.body}</ReactMarkdown>
-      )}
+        )}
+      </div>
     </section>
   );
 }

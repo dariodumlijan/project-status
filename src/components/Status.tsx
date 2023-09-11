@@ -12,11 +12,13 @@ function Status() {
   if (isError) return <div>Error! {get(error, 'message', '')}</div>;
 
   return (
-    <section className="status-wrapper">
-      <h2>Current status</h2>
-      {data?.data.body && (
+    <section className="card-wrapper status-wrapper">
+      <h2 className="title">Current status</h2>
+      <div className="content">
+        {data?.data.body && (
         <ReactMarkdown>{data.data.body}</ReactMarkdown>
-      )}
+        )}
+      </div>
     </section>
   );
 }

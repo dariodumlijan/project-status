@@ -1,0 +1,32 @@
+@import "./markdown";
+
+section {
+  width: 100%;
+
+  &.card-wrapper {
+    border-radius: 4px;
+    border: 1px solid rgba($white, 0.2);
+
+    .title,
+    .content {
+      padding: 20px;
+    }
+
+    .title {
+      background-color: rgba($accent, 0.2);
+      border-radius: 3px;
+      font-size: 1.4em;
+    }
+
+    .content {
+      @include markdown;
+      max-height: 80vh;
+      overflow-y: auto;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
