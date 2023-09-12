@@ -15,7 +15,8 @@ section {
     .title {
       background-color: rgba($accent, 0.2);
       border-radius: 3px;
-      font-size: 1.4em;
+      font-size: 18px;
+      font-weight: 500;
     }
 
     .content {
@@ -23,7 +24,12 @@ section {
       max-height: 80vh;
       overflow-y: auto;
 
-      &:last-child {
+      > :first-child {
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      > :last-child {
         margin-bottom: 0;
         padding-bottom: 0;
       }

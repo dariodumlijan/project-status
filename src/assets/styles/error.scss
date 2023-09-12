@@ -1,0 +1,85 @@
+.error-report {
+  display: flex;
+  flex-direction: column;
+  white-space: break-spaces;
+  width: 100%;
+}
+
+.error-boundary-wrapper {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background: linear-gradient(rgba($background, 0.8), rgba($background, 0.8)), url("../images/server.jpg");
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+
+  .error-boundary-content {
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+
+    .code,
+    .title,
+    .description {
+      text-shadow: 0 2px 5px rgba($background, 0.8);
+    }
+
+    .code {
+      font-size: 100px;
+      font-weight: 700;
+      margin-top: 20px;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 60px;
+      }
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: 600;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 22px;
+      }
+    }
+
+    .description {
+      color: rgba($white, 0.6);
+      font-size: 18px;
+      font-weight: 300;
+      margin-top: 20px;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 14px;
+      }
+    }
+
+    .reload-button {
+      background-color: $accent;
+      border-radius: 4px;
+      border: 1px solid rgba($white, 0.2);
+      cursor: pointer;
+      font-size: 16px;
+      height: auto;
+      margin-top: 80px;
+      max-width: 240px;
+      padding: 16px;
+      width: 100%;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 14px;
+        margin-top: 40px;
+        padding: 12px;
+      }
+    }
+  }
+}

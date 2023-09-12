@@ -11,21 +11,13 @@ const options = {
   repo,
 };
 
-const octokit = new Octokit({
+export const octokit = new Octokit({
   auth: token,
 });
 
-export const getReleaseNotes = async () => {
-  const response = await octokit.request('GET /repos/{owner}/{repo}/releases/latest', options);
+export const getReleaseNotes = () => octokit.request('GET /repos/{owner}/{repo}/releases/latest', options);
 
-  return response;
-};
-
-export const getStatus = async () => {
-  const response = await octokit.request('GET /repos/{owner}/{repo}/issues/{issue_number}', {
-    ...options,
-    issue_number: issueNumber,
-  });
-
-  return response;
-};
+export const getStatus = () => octokit.request('GET /repos/{owner}/{repo}/issues/{issue_number}', {
+  ...options,
+  issue_number: issueNumber,
+});
