@@ -8,6 +8,8 @@ Using [GitHubs' API](https://docs.github.com/en/rest/quickstart?apiVersion=2022-
 - **Release notes**, from projects' [latest release](https://github.com/dariodumlijan/project-status/releases)
 - **Current status**, from [this issues'](https://github.com/dariodumlijan/project-status/issues/1) description
 
+<img width="1420" alt="preview" src="https://github.com/dariodumlijan/project-status/assets/79607795/9d46fe38-2833-46ef-8dbd-7cbacfc68b28">
+
 ---
 
 ## Deployment
