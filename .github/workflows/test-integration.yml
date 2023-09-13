@@ -19,7 +19,7 @@ env:
 jobs:
   run_tests:
     if: github.event_name == 'push' || (github.event_name == 'pull_request')
-    name: Run Tests
+    name: Test
     runs-on: ubuntu-latest
 
     steps:
