@@ -1,6 +1,6 @@
 import { waitFor } from '@testing-library/react';
 import { getIssueByNumberResponse, getLatestReleaseResponse } from '../../__mocks__/dummies';
-import { getReleaseNotes, octokit } from '../../src/api';
+import { getReleaseNotes, getStatus, octokit } from '../../src/api';
 
 describe('API', () => {
   test('getReleaseNotes', () => {
@@ -16,7 +16,7 @@ describe('API', () => {
     vi.spyOn(octokit, 'request').mockResolvedValue(getIssueByNumberResponse as any);
 
     waitFor(async () => {
-      const response = await getReleaseNotes();
+      const response = await getStatus();
       expect(response).toEqual(getIssueByNumberResponse);
     });
   });
