@@ -38,6 +38,7 @@ jobs:
       - name: Build application
         run: yarn build
         env:
+          DEPLOYMENT_REPO: ${{ github.event.repository.name }}
           VITE_GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           VITE_GITHUB_REPO_OWNER: ${{ vars.REPO_NAME }}
           VITE_GITHUB_REPO_NAME: ${{ vars.REPO_OWNER }}
