@@ -79,7 +79,7 @@ In the console (always increment in the next release):
 ### Requirements
 #### Node.js & yarn
 
-Node version `^18.0` and up needed to run the React scripts. And yarn to run the scripts and handle dependencies.
+Node version `>=20.0.0` and up needed to run the React scripts. And yarn to run the scripts and handle dependencies.
 
 #### Project .env variables
 
