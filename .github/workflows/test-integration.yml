@@ -30,8 +30,26 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: yarn
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+      
+      - name: Get yarn cache
+        uses: actions/cache@v4
+        id: cache # use this to check for `cache-hit` (`steps.cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies - Fresh
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
+
+      - name: Install dependencies - Cache
+        if: steps.cache.outputs.cache-hit == 'true'
+        run: yarn install --immutable
 
       # Run tests
       - run: yarn tsc
