@@ -1,7 +1,7 @@
 import React from 'react';
 
 type Props = {
-  children: any,
+  children: React.ReactNode;
 };
 
 type State = {
