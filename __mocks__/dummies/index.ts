@@ -1400,7 +1400,7 @@ export const getProjectIssuesResponse = {
               {},
               {
                 "optionId": "f75ad846",
-                "color": "GRAY",
+                "color": "BLUE",
                 "name": "To Do",
                 "description": "index: 0"
               },
@@ -1454,7 +1454,7 @@ export const getProjectIssuesResponse = {
               {},
               {
                 "optionId": "f75ad846",
-                "color": "GRAY",
+                "color": "BLUE",
                 "name": "To Do",
                 "description": "index: 0"
               },
@@ -1472,7 +1472,7 @@ export const getProjectIssuesResponse = {
               {},
               {
                 "optionId": "f75ad846",
-                "color": "GRAY",
+                "color": "BLUE",
                 "name": "To Do",
                 "description": "index: 0"
               },

@@ -23,7 +23,6 @@ section {
     @include markdown.styles;
     border-radius: 10px;
     border: 1px solid colors.$white;
-    max-height: 80vh;
     overflow-y: auto;
     padding: 20px;
 
@@ -110,6 +109,16 @@ section {
 
         .card {
           border-left-color: colors.$white;
+        }
+      }
+
+      &[data-color="blue"] {
+        .title::before {
+          background-color: colors.$info;
+        }
+
+        .card {
+          border-left-color: colors.$info;
         }
       }
 
