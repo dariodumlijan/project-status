@@ -12,16 +12,16 @@ permissions:
   id-token: write
 
 env:
-  NODE_VERSION: 20.0.0
+  NODE_VERSION: 22.0
 
 jobs:
-  test:
-    name: Test
-    uses: ./.github/workflows/test-integration.yml
+  tests:
+    name: Tests
+    uses: ./.github/workflows/tests.yml
 
   build:
     name: Build
-    needs: test
+    needs: tests
     runs-on: ubuntu-latest
 
     steps:
@@ -39,10 +39,12 @@ jobs:
       - name: Build application
         run: yarn build
         env:
-          VITE_GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          VITE_GITHUB_ACCESS_TOKEN_REPO: ${{ secrets.ACCESS_TOKEN_REPO }}
+          VITE_GITHUB_ACCESS_TOKEN_PROJECT: ${{ secrets.ACCESS_TOKEN_PROJECT }}
           VITE_GITHUB_REPO_OWNER: ${{ vars.REPO_OWNER }}
           VITE_GITHUB_REPO_NAME: ${{ vars.REPO_NAME }}
-          VITE_GITHUB_STATUS_ISSUE_NUMBER: ${{ vars.STATUS_ISSUE_NUMBER }}
+          VITE_GITHUB_ISSUE_NUMBER: ${{ vars.ISSUE_NUMBER }}
+          VITE_GITHUB_PROJECT_NUMBER: ${{ vars.PROJECT_NUMBER }}
           # DEPLOYMENT_REPO: ${{ github.event.repository.name }}
 
       - name: Setup GitHub Pages
@@ -51,7 +53,7 @@ jobs:
       - name: Upload build
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: "./dist"
 
   deploy:
     name: Deploy

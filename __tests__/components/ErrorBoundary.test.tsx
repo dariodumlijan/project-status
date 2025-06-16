@@ -1,7 +1,6 @@
-/* eslint-disable no-console */
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import ErrorBoundary from '../../src/components/ErrorBoundary';
+import ErrorBoundary from '../../src/components/containers/ErrorBoundary';
 
 const original = console.error;
 

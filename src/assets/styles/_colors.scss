@@ -1,13 +1,7 @@
-$accent: #005f9e;
 $background: #0d1117;
 $black: #000000;
-$primary: #1888dc;
 $white: #e6edf3;
-
-:export {
-  accent: $accent;
-  background: $background;
-  black: $black;
-  primary: $primary;
-  white: $white;
-}
+$error: #fb2c36;
+$info: #00a6f4;
+$success: #22c55e;
+$warning: #eab308;

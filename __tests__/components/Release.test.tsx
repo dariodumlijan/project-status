@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { getLatestReleaseResponse } from '../../__mocks__/dummies';
-import Release from '../../src/components/Release';
+import Release from '../../src/components/containers/Release';
 
 const defaultOptions = {
   data: null,
@@ -10,7 +10,7 @@ const defaultOptions = {
   isLoading: false,
 };
 
-const handleMockQuery = async (options: any) => {
+const handleMockQuery = async (options) => {
   const reactQuery = await import('@tanstack/react-query');
   reactQuery.useQuery = vi.fn().mockReturnValue({ ...defaultOptions, ...options });
 };
@@ -43,7 +43,7 @@ describe('section Release', () => {
 
     render(<Release />);
 
-    expect(screen.getByText('Release Notes')).toBeInTheDocument();
+    expect(screen.getByText('v1.0.0')).toBeInTheDocument();
   });
 },
 );

@@ -1,14 +1,18 @@
-import Header from './components/Header';
-import Release from './components/Release';
-import Status from './components/Status';
+import Header from './components/containers/Header';
+import Release from './components/containers/Release';
+import Roadmap from './components/containers/Roadmap';
+import Services from './components/containers/Services';
+import Status from './components/containers/Status';
 
 function App() {
   return (
     <main>
       <Header />
       <div className="application-wrapper">
-        <Release />
         <Status />
+        <Services />
+        <Release />
+        <Roadmap />
       </div>
     </main>
   );

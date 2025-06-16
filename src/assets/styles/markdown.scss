@@ -1,6 +1,6 @@
-@import "./colors";
+@use "./colors";
 
-@mixin markdown {
+@mixin styles {
   font-size: 14px;
   line-height: 1.4;
 
@@ -19,7 +19,7 @@
   a:hover,
   a:focus,
   a:active {
-    color: $primary;
+    color: colors.$success;
   }
 
   .modest-no-decoration {
@@ -92,19 +92,19 @@
   h1,
   h2,
   h3 {
-    border-bottom: 2px solid rgba($white, 0.2);
+    border-bottom: 2px solid rgba(colors.$white, 0.2);
     margin: 14px 0;
     padding-bottom: 10px;
   }
 
   blockquote {
-    border-left: 8px solid rgba($white, 0.2);
+    border-left: 8px solid rgba(colors.$white, 0.2);
     padding: 5px;
   }
 
   pre,
   code {
-    background-color: rgba($white, 0.2);
+    background-color: rgba(colors.$white, 0.2);
   }
 
   strong {
@@ -120,5 +120,11 @@
   menu {
     list-style: initial;
     margin-left: 14px;
+  }
+
+  hr {
+    border-bottom: 2px solid rgba(colors.$white, 0.2);
+    margin: 14px 0;
+    width: 100%;
   }
 }

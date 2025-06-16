@@ -1,11 +1,14 @@
+@use "./colors";
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+
 html {
-  background: $background;
-  color: $white;
+  background: colors.$background;
+  color: colors.$white;
   height: 100%;
   width: 100%;
 
   body {
-    color: $white;
+    color: colors.$white;
     font-family: "Sora", Helvetica, sans-serif;
     font-weight: 400;
     height: 100%;
@@ -24,15 +27,12 @@ html {
 
         .application-wrapper {
           display: flex;
+          flex-direction: column;
           gap: 40px;
           margin: 0 auto 20px auto;
           max-width: 1400px;
           padding: 0 20px 80px 20px;
           width: 100%;
-
-          @media screen and (max-width: 1200px) {
-            flex-direction: column;
-          }
         }
       }
     }
