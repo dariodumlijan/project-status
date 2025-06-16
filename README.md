@@ -1,25 +1,32 @@
 # Project Status
 ##### This project is built using [VITE](https://vitejs.dev/) with React TypeScript template
-#### Live example: https://dariodumlijan.github.io/project-status/
+#### Live example: https://project-status.dariodumlijan.com
 
-SPA (React) for displaying project release notes & status using GitHub API
+Zero cost SPA (React) app for displaying projects'/softwares' current status, release notes & roadmap
 
 Using [GitHubs' API](https://docs.github.com/en/rest/quickstart?apiVersion=2022-11-28) we are getting
 - **Release notes**, from projects' [latest release](https://github.com/dariodumlijan/project-status/releases)
 - **Current status**, from [this issues'](https://github.com/dariodumlijan/project-status/issues/1) description
+- **Individual service statuses**, from [these sub issues](https://github.com/dariodumlijan/project-status/issues/1)
+- **Roadmap**, from [this project](https://github.com/users/dariodumlijan/projects/2)
 
-<img width="1420" alt="preview" src="https://github.com/dariodumlijan/project-status/assets/79607795/9d46fe38-2833-46ef-8dbd-7cbacfc68b28">
+<img width="1200" alt="preview" src=".github/docs/preview.png">
 
 ---
 
 ## Deployment
-### Setup GitHub token
+### Setup GitHub tokens
 
-You can find how to get a GitHub access token in [GitHubs' documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
+You can find how to get a GitHub access tokens in [GitHubs' documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
-The token only needs **Read-only** repo access to:
+In order to get full functionality as seen in the 
+
+The `fine-grained` token only needs **read-only** repo access to:
 - Releases
 - Issues
+
+The `classic` token only needs **read-only** access to:
+- Projects
 
 ### Setup GitHub actions
 Add the secrets/variables with the exact names listed below to you repos settings for actions
@@ -28,13 +35,15 @@ This will enable the GitHub action workflow for building and deploying the app t
 
 **Secrets**
 
-    ACCESS_TOKEN="<your_github_token>"
+    ACCESS_TOKEN_REPO="<your_github_token_fine_grained>"
+    ACCESS_TOKEN_PROJECT="<your_github_token_classic>"
 
 **Variables**
 
-    REPO_NAME="project-status"
-    REPO_OWNER="dariodumlijan"
-    STATUS_ISSUE_NUMBER="1"
+    REPO_NAME="repo_name"
+    REPO_OWNER="repo_owner"
+    ISSUE_NUMBER="1"
+    PROJECT_NUMBER="1"
 
 ### Setup GitHub pages
 ATM there is some known problems when deploying to GitHub pages using tags
@@ -83,10 +92,12 @@ Node version `>=22.0` and up needed to run the React scripts. And yarn to run th
 
 #### Project .env variables
 
-    VITE_GITHUB_ACCESS_TOKEN="<your_github_token>"
-    VITE_GITHUB_REPO_NAME="project-status"
-    VITE_GITHUB_REPO_OWNER="dariodumlijan"
-    VITE_GITHUB_STATUS_ISSUE_NUMBER="1"
+    VITE_GITHUB_ACCESS_TOKEN_REPO="your_github_token_fine_grained"
+    VITE_GITHUB_ACCESS_TOKEN_PROJECT="your_github_token_classic"
+    VITE_GITHUB_REPO_NAME="repo_name"
+    VITE_GITHUB_REPO_OWNER="repo_owner"
+    VITE_GITHUB_ISSUE_NUMBER="1"
+    VITE_GITHUB_PROJECT_NUMBER="1"
 
 ### Setup
 Run the following commands to setup the project

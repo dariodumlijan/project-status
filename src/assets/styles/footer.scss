@@ -1,0 +1,23 @@
+@use "./colors";
+
+footer {
+  color: rgba(colors.$white, 0.6);
+  display: flex;
+  font-size: 12px;
+  width: 100%;
+
+  .container {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    max-width: 1400px;
+    padding: 20px 80px 20px 80px;
+    width: 100%;
+
+    @media screen and (max-width: 770px) {
+      padding: 20px 20px 20px 20px;
+    }
+  }
+}

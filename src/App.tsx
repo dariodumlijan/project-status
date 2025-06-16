@@ -1,3 +1,4 @@
+import Footer from './components/containers/Footer';
 import Header from './components/containers/Header';
 import Release from './components/containers/Release';
 import Roadmap from './components/containers/Roadmap';
@@ -14,6 +15,7 @@ function App() {
         <Release />
         <Roadmap />
       </div>
+      <Footer />
     </main>
   );
 }
