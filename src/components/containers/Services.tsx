@@ -1,9 +1,9 @@
 import { first, get, isEmpty, map } from 'lodash';
 import { useQuery } from '@tanstack/react-query';
-import ErrorMessage from './ErrorMessage';
-import ServiceState from './ServiceState';
-import { getStatusServices } from '../api';
-import text from "../locales/default.json"
+import ErrorMessage from '../elements/ErrorMessage';
+import ServiceState from '../elements/ServiceState';
+import { getStatusServices } from '../../api';
+import text from "../../locales/default.json"
 
 function Services() {
   const {
@@ -16,7 +16,7 @@ function Services() {
       <h2 className="title">{text.services.title}</h2>
       <div className="grid-wrapper">
         {isEmpty(response) ? (
-          <div className="content">
+          <div className="card">
             {isLoading && <p>{text.loading.message}</p>}
             {isError && <ErrorMessage error={error} />}
           </div>
@@ -25,7 +25,7 @@ function Services() {
             const label = first(service.labels)
 
             return (
-              <div key={service.id} className="content" title={label?.name}>
+              <div key={service.id} className="card" title={label?.name}>
                 <ServiceState label={label} />
                 <h3 className="title">{service.title}</h3>
               </div>

@@ -1,4 +1,4 @@
-import text from "../locales/default.json"
+import text from "../../locales/default.json"
 
 function Header() {
   return (

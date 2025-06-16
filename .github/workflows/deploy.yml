@@ -39,10 +39,12 @@ jobs:
       - name: Build application
         run: yarn build
         env:
-          VITE_GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          VITE_GITHUB_ACCESS_TOKEN_REPO: ${{ secrets.ACCESS_TOKEN_REPO }}
+          VITE_GITHUB_ACCESS_TOKEN_PROJECT: ${{ secrets.ACCESS_TOKEN_PROJECT }}
           VITE_GITHUB_REPO_OWNER: ${{ vars.REPO_OWNER }}
           VITE_GITHUB_REPO_NAME: ${{ vars.REPO_NAME }}
-          VITE_GITHUB_STATUS_ISSUE_NUMBER: ${{ vars.STATUS_ISSUE_NUMBER }}
+          VITE_GITHUB_ISSUE_NUMBER: ${{ vars.ISSUE_NUMBER }}
+          VITE_GITHUB_PROJECT_NUMBER: ${{ vars.PROJECT_NUMBER }}
           # DEPLOYMENT_REPO: ${{ github.event.repository.name }}
 
       - name: Setup GitHub Pages

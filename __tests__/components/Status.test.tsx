@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { getIssueByNumberResponse } from '../../__mocks__/dummies';
-import Status from '../../src/components/Status';
+import Status from '../../src/components/containers/Status';
 
 const defaultOptions = {
   data: null,
@@ -10,7 +10,7 @@ const defaultOptions = {
   isLoading: false,
 };
 
-const handleMockQuery = async (options: any) => {
+const handleMockQuery = async (options) => {
   const reactQuery = await import('@tanstack/react-query');
   reactQuery.useQuery = vi.fn().mockReturnValue({ ...defaultOptions, ...options });
 };
@@ -43,6 +43,6 @@ describe('section Status', () => {
 
     render(<Status />);
 
-    expect(screen.getByText('Project Status')).toBeInTheDocument();
+    expect(screen.getByText('Current status')).toBeInTheDocument();
   });
 });

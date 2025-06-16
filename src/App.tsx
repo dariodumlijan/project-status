@@ -1,7 +1,8 @@
-import Header from './components/Header';
-import Release from './components/Release';
-import Services from './components/Services';
-import Status from './components/Status';
+import Header from './components/containers/Header';
+import Release from './components/containers/Release';
+import Roadmap from './components/containers/Roadmap';
+import Services from './components/containers/Services';
+import Status from './components/containers/Status';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Status />
         <Services />
         <Release />
-        <Status />
+        <Roadmap />
       </div>
     </main>
   );

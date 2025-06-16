@@ -1,9 +1,9 @@
 import { get } from 'lodash';
 import { useQuery } from '@tanstack/react-query';
 import ReactMarkdown from 'react-markdown';
-import ErrorMessage from './ErrorMessage';
-import { getReleaseNotes } from '../api';
-import text from "../locales/default.json"
+import ErrorMessage from '../elements/ErrorMessage';
+import { getReleaseNotes } from '../../api';
+import text from "../../locales/default.json"
 
 function Release() {
   const {
@@ -22,7 +22,7 @@ function Release() {
             new Date(response.published_at).toLocaleString()}
         </span>
       )}
-      <div className="content">
+      <div className="card">
         {isLoading && <p>{text.loading.message}</p>}
         {isError && <ErrorMessage error={error} />}
         {body && <ReactMarkdown>{body}</ReactMarkdown>}

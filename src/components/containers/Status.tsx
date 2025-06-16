@@ -1,9 +1,9 @@
 import { get } from 'lodash';
 import { useQuery } from '@tanstack/react-query';
 import ReactMarkdown from 'react-markdown';
-import ErrorMessage from './ErrorMessage';
-import { getStatusSummary } from '../api';
-import text from "../locales/default.json"
+import ErrorMessage from '../elements/ErrorMessage';
+import { getStatusSummary } from '../../api';
+import text from "../../locales/default.json"
 import { IconActivity } from '@tabler/icons-react';
 
 function Status() {
@@ -15,7 +15,7 @@ function Status() {
 
   return (
     <section id="status" className="status-wrapper">
-      <div className="content">
+      <div className="card">
         <div className="header">
           <h2 className="title">
             <IconActivity className="icon" />

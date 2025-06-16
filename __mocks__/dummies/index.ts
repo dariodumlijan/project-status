@@ -1378,4 +1378,148 @@ export const getSubIssuesByNumberResponse = [
   }
 ];
 
-export const getRoadmapResponse = {};
+export const getProjectNodeResponse = {
+  "user": {
+    "projectV2": {
+      "id": "PVT_kwHOBL63884A7jEQ"
+    }
+  }
+};
+
+export const getProjectIssuesResponse = {
+  "node": {
+    "items": {
+      "nodes": [
+        {
+          "content": {
+            "id": "I_kwDOKRtVu867w1HJ",
+            "title": "Mobile App"
+          },
+          "fieldValues": {
+            "nodes": [
+              {},
+              {
+                "optionId": "f75ad846",
+                "color": "GRAY",
+                "name": "To Do",
+                "description": "index: 0"
+              },
+              {}
+            ]
+          }
+        },
+        {
+          "content": {
+            "id": "I_kwDOKRtVu867nlGk",
+            "title": "API Rate Limiting"
+          },
+          "fieldValues": {
+            "nodes": [
+              {},
+              {
+                "optionId": "47fc9ee4",
+                "color": "YELLOW",
+                "name": "In Progress",
+                "description": "index: 1"
+              },
+              {}
+            ]
+          }
+        },
+        {
+          "content": {
+            "id": "I_kwDOKRtVu867w1Sy",
+            "title": "SSO Integration"
+          },
+          "fieldValues": {
+            "nodes": [
+              {},
+              {
+                "optionId": "47fc9ee4",
+                "color": "YELLOW",
+                "name": "In Progress",
+                "description": "index: 1"
+              },
+              {}
+            ]
+          }
+        },
+        {
+          "content": {
+            "id": "I_kwDOKRtVu867nkd7",
+            "title": "Advanced Analytics Dashboard"
+          },
+          "fieldValues": {
+            "nodes": [
+              {},
+              {
+                "optionId": "f75ad846",
+                "color": "GRAY",
+                "name": "To Do",
+                "description": "index: 0"
+              },
+              {}
+            ]
+          }
+        },
+        {
+          "content": {
+            "id": "I_kwDOKRtVu867w2kQ",
+            "title": "Add multi-language support"
+          },
+          "fieldValues": {
+            "nodes": [
+              {},
+              {
+                "optionId": "f75ad846",
+                "color": "GRAY",
+                "name": "To Do",
+                "description": "index: 0"
+              },
+              {}
+            ]
+          }
+        },
+        {
+          "content": {
+            "id": "I_kwDOKRtVu867nlYk",
+            "title": "Database Migration"
+          },
+          "fieldValues": {
+            "nodes": [
+              {},
+              {
+                "optionId": "98236657",
+                "color": "GREEN",
+                "name": "Done",
+                "description": "index: 2"
+              },
+              {}
+            ]
+          }
+        },
+        {
+          "content": {
+            "id": "I_kwDOKRtVu867w1ee",
+            "title": "Security Audit"
+          },
+          "fieldValues": {
+            "nodes": [
+              {},
+              {
+                "optionId": "98236657",
+                "color": "GREEN",
+                "name": "Done",
+                "description": "index: 2"
+              },
+              {}
+            ]
+          }
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false
+      }
+    }
+  }
+};

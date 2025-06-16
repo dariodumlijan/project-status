@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import text from "../locales/default.json"
+import text from "../../locales/default.json"
 
 type Props = {
   children: React.ReactNode;
