@@ -1,10 +1,14 @@
-import Logo from '../assets/images/logo.png';
+import text from "../locales/default.json"
 
 function Header() {
   return (
-    <nav className="header-wrapper">
-      <div className="logo-wrapper">
-        <img src={Logo} alt="logo" />
+    <nav>
+      <div className="container">
+        <div className="header-wrapper">
+          <h1>{text.header.title}</h1>
+          <span>{text.header.subtitle}</span>
+        </div>
+        <div className="theme-wrapper"></div>
       </div>
     </nav>
   );

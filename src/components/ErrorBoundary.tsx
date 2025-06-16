@@ -1,4 +1,5 @@
-import React from 'react';
+import { Component } from 'react';
+import text from "../locales/default.json"
 
 type Props = {
   children: React.ReactNode;
@@ -8,7 +9,7 @@ type State = {
   hasError: boolean,
 };
 
-class ErrorBoundary extends React.Component<Props, State> {
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -29,11 +30,11 @@ class ErrorBoundary extends React.Component<Props, State> {
       return (
         <div className="error-boundary-wrapper">
           <div className="error-boundary-content">
-            <h1 className="code">500</h1>
-            <h2 className="title">Internal Server Error</h2>
-            <span className="description">We are sorry for the inconvenience. Please try to reload the page.</span>
+            <h1 className="code">{text.error.code}</h1>
+            <h2 className="title">{text.error.title}</h2>
+            <span className="description">{text.error.message}</span>
             <button className="reload-button" onClick={this.handleReload}>
-              Reload the page
+              {text.error.action}
             </button>
           </div>
         </div>

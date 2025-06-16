@@ -1,0 +1,29 @@
+{
+  "header": {
+    "title": "Project Status",
+    "subtitle": "Current status, release notes & roadmap for our services"
+  },
+  "error": {
+    "code": "500",
+    "title": "Internal Server Error",
+    "message": "We are sorry for the inconvenience. Please try to reload the page.",
+    "action": "Reload the page"
+  },
+  "loading": {
+    "message": "Loading..."
+  },
+  "status": {
+    "title": "Current status",
+    "timestamp": "Updated at:"
+  },
+  "services": {
+    "title": "Services"
+  },
+  "release": {
+    "title": "Latest release",
+    "timestamp": "Released at:"
+  },
+  "roadmap": {
+    "title": "Roadmap"
+  }
+}

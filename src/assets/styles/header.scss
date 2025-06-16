@@ -1,27 +1,49 @@
-.header-wrapper {
-  align-items: center;
-  background: $black;
-  border-bottom: 1px solid rgba($white, 0.2);
-  color: $white;
+@use "./colors";
+
+nav {
+  border-bottom: 1px solid colors.$white;
+  color: colors.$white;
   display: flex;
-  gap: 20px;
-  height: 80px;
-  justify-content: space-between;
-  min-height: 80px;
   width: 100%;
 
-  .logo-wrapper {
+  .container {
     align-items: center;
     display: flex;
-    height: 100%;
+    gap: 20px;
+    justify-content: space-between;
     margin: 0 auto 0 auto;
     max-width: 1400px;
-    padding: 0 20px;
+    padding: 20px;
     width: 100%;
+  }
 
-    img {
-      object-fit: contain;
-      height: 40px;
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+
+    h1 {
+      align-items: center;
+      display: flex;
+      font-size: 30px;
+      font-weight: bold;
+      gap: 10px;
+      position: relative;
+
+      &::before {
+        background-color: colors.$success;
+        border-radius: 100%;
+        content: "";
+        display: block;
+        height: 10px;
+        width: 10px;
+      }
+    }
+
+    span {
+      color: rgba(colors.$white, 0.6);
+      font-size: 15px;
     }
   }
 }
